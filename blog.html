@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>krupa Corporation </title>
+    <!-- style sheet linking  -->
+     <link rel="stylesheet" href="style.css">
+
+     <!-- fontawaesom cdn  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font import  -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="images/logo-krupa.png" alt="" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="trade_hub.html">Trade Hub</a></li>
+                <li><a href="https://www.linkedin.com/company/thekrupacorp/jobs/">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <button class="close-menu">✕</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="trade_hub.html">Trade Hub</a></li>
+            <li><a href="https://www.linkedin.com/company/thekrupacorp/jobs/">Careers</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="overlay"></div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const overlay = document.querySelector('.overlay');
+        const closeMenu = document.querySelector('.close-menu');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            overlay.style.display = 'block';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            overlay.style.display = 'none';
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        closeMenu.addEventListener('click', closeMobileMenu);
+        overlay.addEventListener('click', closeMobileMenu);
+    </script>
+    <main>
+        
+    </main>
+    <footer class="footer-section"></footer>
+        <div class="footer-container">
+            <div class="column-wrapper" style="padding: 40px;">
+                <div class="brand-logo">
+                    <img src="images/logo-krupa.png" alt="Krupa Corporation" width="350">
+                </div>
+                <p class="footer-info">Krupa Corporation is a B2B commerce company that leverages technology to revolutionize procurement, providing a streamlined and efficient experience for all players in the construction ecosystem.</p>
+            </div>
+            <div class="column-wrapper">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="link-item"><a href="index.html">Home</a></li>
+                    <li class="link-item"><a href="aboutus.html">About</a></li>
+                    <li class="link-item"><a href="blog.html">Blog</a></li>
+                    <li class="link-item"><a href="blog.html">E-Trade</a></li>
+                    <li class="link-item"><a href="https://www.linkedin.com/company/thekrupacorp/jobs/">Careers</a></li>
+                    <li class="link-item"><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="column-wrapper">
+                <h3>Policies</h3>
+                <ul class="footer-links">
+                    <li class="link-item"><a href="#">Terms & Conditions</a></li>
+                    <li class="link-item"><a href="#">Privacy Policy</a></li>
+                    <li class="link-item"><a href="#">Shipping Policy</a></li>
+                    <li class="link-item"><a href="#">Refund Policy</a></li>
+                    <li class="link-item"><a href="#">Cancellation Policy</a></li>
+                </ul>
+            </div>
+            <div class="column-wrapper">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li class="link-item"><a href="#">Krupa Corporation HQ 4th Floor, Sailok Complex, 6/1,<br> Arundelpet, Guntur, Andhra Pradesh 522002</a></li>
+                    <li class="link-item"><a href="#">+919059577879</a></li>
+                    <li class="link-item"><a href="mailto:support@krupacorp.com">Support@krupacorp.com</a></li>
+                </ul>
+            </div>
+            <div class="column-wrapper">
+                <h3>Get in Touch</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/krupacorp/"><i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i></a>
+                    <a href="https://x.com/krupacorpindia"><i class="fa-brands fa-twitter fa-xl" style="color: #000000;"></i></a>
+                    <a href="https://www.linkedin.com/company/krupacorporationcom"><i class="fa-brands fa-linkedin fa-xl" style="color: #000000;"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-section">
+            © 2024 Krupa Corporation Private Limited
+        </div>
+    </footer>
+</body>
+</html>

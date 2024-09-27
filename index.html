@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Krupa Corporation</title>
+    <meta name="description" content="
+" />
+
+    <link href="/" rel="canonical">
+
+
+
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+    <link rel="icon" type="image/x-icon" href="images/fav.png">
+   
+    <!-- style sheet linking  -->
+     <link rel="stylesheet" href="style.css">
+
+     <!-- fontawaesom cdn  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font import  -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+        header{
+            background-image: url(images/back.gif);
+            background-size: cover; 
+        }
+        .sidebyside{
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white;
+            justify-content: space-between;
+            align-items:center;
+            
+        }
+        .sidebyside .content {
+            font-family: "Jost", system-ui;
+            padding: 30px;
+            max-width: 800px;
+        } 
+        .sidebyside .content h1{
+            font-weight: 200;
+            font-size: 40px;
+        }
+        .sidebyside .content p{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+        }
+        .sectionHeading{
+            font-size: 40px;
+            color: #01A1FF;
+        }
+        @media (max-width: 768px){
+            .sidebyside{
+                flex-direction: column;
+            }
+            .sidebyside .content p{
+                text-align: justify;
+            }
+        }
+
+
+        /* cards  */
+        .cards{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .cards h1 {
+            color: #0099ff;
+            margin-bottom: 30px;
+            font-weight: 400;
+            font-size: 28px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: #0099ff;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .explore-button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border: 1px solid #0099ff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .founder{
+            background-color: #EBEBEB;
+            padding: 40px;
+        }
+        .founder-card{
+            max-width: 1200px;
+            display: flex;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 30px;
+
+        }
+        .founder-card .content{
+            background-color: #0099FF;
+            color: white;
+            padding: 40px;
+            border-radius: 30px;
+
+        }
+        @media (max-width: 768px){
+            .founder-card{
+                flex-direction: column;
+            }
+        }
+
+
+/* marquee  */
+/* marquee section */
+.marquee-section {
+  background-color: var(--black);
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 1600px;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* marquee content animation */
+.marquee-content {
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+  animation-play-state: running;
+  will-change: transform;
+}
+
+.marquee-item {
+  display: inline-block; 
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  
+  margin-left: 40px;
+}
+
+/* setting image size and fit */
+.marquee-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  transition: filter 0.9s ease;
+}
+
+/* keyframes for the scrolling animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-section:hover .marquee-content {
+  animation-play-state: paused; 
+}
+
+
+/* slider  */
+.slider-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            padding: 40px;
+            background-color: #EBEBEB;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            flex: 0 0 calc(25% - 15px);
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            min-width: 200px;
+        }
+        .slide img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .slide h2 {
+            color: #0066cc;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .slide p {
+            color: #333;
+            font-size: 14px;
+        }
+        .date {
+            background-color: #0066cc;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            z-index: 10;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        .continue-reading {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        @media (max-width: 1024px) {
+            .slide {
+                flex: 0 0 calc(33.333% - 15px);
+            }
+        }
+        @media (max-width: 768px) {
+            .slide {
+                flex: 0 0 calc(50% - 15px);
+            }
+        }
+        @media (max-width: 480px) {
+            .slide {
+                flex: 0 0 calc(100% - 15px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="images/logo-krupa.png" alt="" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="trade_hub.html">Trade Hub</a></li>
+                <li><a href="https://www.linkedin.com/company/thekrupacorp/jobs/">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <button class="close-menu">✕</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="trade_hub.html">Trade Hub</a></li>
+            <li><a href="https://www.linkedin.com/company/thekrupacorp/jobs/">Careers</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="overlay"></div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const overlay = document.querySelector('.overlay');
+        const closeMenu = document.querySelector('.close-menu');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            overlay.style.display = 'block';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            overlay.style.display = 'none';
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        closeMenu.addEventListener('click', closeMobileMenu);
+        overlay.addEventListener('click', closeMobileMenu);
+    </script>
+    <main>
+        <header  style="height: 900px;">
+        </header>
+        <!-- marquee  -->
+        <section class="marquee-section">
+      
+            <div class="marquee-content">
+                <div class="marquee-item"><img src="images/1.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/2.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/3.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/4.png" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/5.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/6.png" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/7.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/8.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/9.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/10.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/11.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/12.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/13.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/14.png" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/15.png" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/16.png" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/17.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/18.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/19.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/20.png" alt="Client Logo"></div>
+            </div>
+            <div class="marquee-content">
+                <div class="marquee-item"><img src="images/1.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/2.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/3.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/4.png" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/5.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/6.png" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/7.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/8.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/9.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/10.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/11.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/12.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/13.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/14.png" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/15.png" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/16.png" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/17.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/18.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/19.webp" alt="Client Logo"></div>
+                <div class="marquee-item"><img src="images/20.png" alt="Client Logo"></div>
+            </div>
+        </section>
+
+        <div class="sidebyside">
+            <div class="content">
+                <h1>
+                    <h1 class="sectionHeading"><b>Building the next big thing
+                    </b></h1>
+                </h1>
+                <p>Krupa Corporation's adept resource management strategies
+                    reflect its commitment to steering India's economic course with prudence and
+                    foresight. By optimizing the utilization of critical resources, the corporation
+                    bolsters the foundations of the nation's prosperity, ensuring their availability for
+                    both current and future generations. This emphasis on responsible stewardship speaks
+                    volumes about its role as a custodian of India's invaluable assets.</p>
+            </div>
+            <img src="images/logo1.png" alt="" style="height: 300px ;width: 300px;">
+
+        </div>
+
+        <section class="cards" style="padding: 30px;">
+            <h1>Growth For Greater Things</h1>
+            <div class="container">
+                <div class="card zoom">
+                    <img src="images/icon1.png" alt="">
+                    <h2>B2B Procurement Excellence</h2>
+                    <p>Enabling enterprise clients to visualize the complete construction materials value chain, from procurement to delivery.</p>
+                </div>
+                <div class="card zoom" >
+                    <img src="images/icon2.png" alt="">
+                    <h2>Supporting Retailers</h2>
+                    <p>Provides seamless management of purchasing, financing, inventory, delivery, and more— all in one platform.</p>
+                </div>
+                <div class="card zoom">
+                    <img src="images/icon3.png" alt="">
+                    <h2>Software Solutions</h2>
+                    <p>Software for construction goods retailers includes inventory management, POS, CRM, and e-commerce tools to streamline operations and enhance efficiency.</p>
+                </div>
+            </div>
+            <a href="#" class="explore-button">Explore More</a>
+        </section>
+
+        <section class="founder">
+            <div class="founder-card">
+                <div class="content">
+                    <h3 class="section-heading text-white">Growth For Greater Things
+                    </h3>
+                    <p class="text-white mb-4">
+                        "We persistently embrace our vision of 'Growth For Greater
+                        Things', striving to become a preeminent force in industries
+                        that foster growth, while upholding ethical standards and making
+                        meaningful contributions to the progress of our nation."
+                    </p>
+                    <p class="ceo">Pradeep Devarakonda<span>Founder & CEO, Krupa Corporation</span></p>
+                </div>
+                <img src="images/ceo.png" alt="" style="width: 370px;" >
+            </div>
+        </section>
+
+        <section class="news-room" style="background-color: #EBEBEB;">
+           
+        
+        <div class="slider-container">
+            <h1>In the News</h1>
+            <div class="slider">
+                <div class="slide">
+                    <span class="date">SEPTEMBER 11, 2024</span>
+                    <h2>Bajaj Housing Finance draws bids worth $39 bln in hottest India IPO this year</h2>
+                    <p>Bajaj Housing Finance, a unit of Bajaj Finance, has garnered significant in...</p>
+                    <a href="#" class="continue-reading">Continue reading →</a>
+                </div>
+                <div class="slide">
+                    <span class="date">SEPTEMBER 3, 2024</span>
+                    <img src="/api/placeholder/400/300" alt="Sanjiv Bajaj">
+                    <h2>Bajaj Housing will not need more capital in the next few years: Sanjiv Bajaj</h2>
+                    <p>Bajaj Housing Finance Ltd will not need additional capital for its growth i...</p>
+                    <a href="#" class="continue-reading">Continue reading →</a>
+                </div>
+                <div class="slide">
+                    <span class="date">AUGUST 23, 2024</span>
+                    <img src="/api/placeholder/400/300" alt="Ultimate Table Tennis 2024">
+                    <h2>Ultimate Table Tennis 2024: Thiru Udhayanidhi Stalin Inaugurates 17 Days Of Thrilling Action in Chennai</h2>
+                    <p>The Ultimate Table Tennis 2024 (UTT) was officially launched yesterday by T...</p>
+                    <a href="#" class="continue-reading">Continue reading →</a>
+                </div>
+                <div class="slide">
+                    <span class="date">AUGUST 22, 2024</span>
+                    <img src="/api/placeholder/400/300" alt="Bajaj Auto Scooters">
+                    <h2>Bajaj Auto receives approval for 13 vehicles under PLI scheme: Exclusive</h2>
+                    <p>Bajaj Auto has received approval for production-linked incentives (PLI) for...</p>
+                    <a href="#" class="continue-reading">Continue reading →</a>
+                </div>
+              <div class="slide">
+                    <span class="date">AUGUST 22, 2024</span>
+                    <img src="/api/placeholder/400/300" alt="Bajaj Auto Scooters">
+                    <h2>Bajaj Auto receives approval for 13 vehicles under PLI scheme: Exclusive</h2>
+                    <p>Bajaj Auto has received approval for production-linked incentives (PLI) for...</p>
+                    <a href="#" class="continue-reading">Continue reading →</a>
+                </div>
+                <div class="slide">
+                    <span class="date">AUGUST 22, 2024</span>
+                    <img src="/api/placeholder/400/300" alt="Bajaj Auto Scooters">
+                    <h2>Bajaj Auto receives approval for 13 vehicles under PLI scheme: Exclusive</h2>
+                    <p>Bajaj Auto has received approval for production-linked incentives (PLI) for...</p>
+                    <a href="#" class="continue-reading">Continue reading →</a>
+                </div>
+                <div class="slide">
+                    <span class="date">AUGUST 22, 2024</span>
+                    <img src="/api/placeholder/400/300" alt="Bajaj Auto Scooters">
+                    <h2>Bajaj Auto receives approval for 13 vehicles under PLI scheme: Exclusive</h2>
+                    <p>Bajaj Auto has received approval for production-linked incentives (PLI) for...</p>
+                    <a href="#" class="continue-reading">Continue reading →</a>
+                </div>
+              <div class="slide">
+                    <span class="date">AUGUST 22, 2024</span>
+                    <img src="/api/placeholder/400/300" alt="Bajaj Auto Scooters">
+                    <h2>Bajaj Auto receives approval for 13 vehicles under PLI scheme: Exclusive</h2>
+                    <p>Bajaj Auto has received approval for production-linked incentives (PLI) for...</p>
+                    <a href="#" class="continue-reading">Continue reading →</a>
+                </div>
+            </div>
+            <button class="nav-button prev">&lt;</button>
+            <button class="nav-button next">&gt;</button>
+        </div>
+    </section>
+        <script>
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            let currentIndex = 0;
+            let slidesToShow = 4;
+            let slideWidth = 0;
+            let autoSlideInterval;
+    
+            function updateSlidesToShow() {
+                if (window.innerWidth <= 480) {
+                    slidesToShow = 1;
+                } else if (window.innerWidth <= 768) {
+                    slidesToShow = 2;
+                } else if (window.innerWidth <= 1024) {
+                    slidesToShow = 3;
+                } else {
+                    slidesToShow = 4;
+                }
+            }
+    
+            function updateSlideWidth() {
+                slideWidth = slides[0].offsetWidth + 30; 
+            }
+    
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
+    
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % (slides.length - slidesToShow + 1);
+                updateSlider();
+            }
+    
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + (slides.length - slidesToShow + 1)) % (slides.length - slidesToShow + 1);
+                updateSlider();
+            }
+    
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+            }
+    
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+    
+            prevButton.addEventListener('click', () => {
+                prevSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+    
+            nextButton.addEventListener('click', () => {
+                nextSlide();
+                stopAutoSlide();
+                startAutoSlide();
+            });
+    
+            window.addEventListener('resize', () => {
+                updateSlidesToShow();
+                updateSlideWidth();
+                updateSlider();
+            });
+    
+            // Initialize slider
+            updateSlidesToShow();
+            updateSlideWidth();
+            updateSlider();
+            startAutoSlide();
+    
+            // Pause auto-slide when hovering over the slider
+            slider.addEventListener('mouseenter', stopAutoSlide);
+            slider.addEventListener('mouseleave', startAutoSlide);
+        </script>
+        
+    </main>
+    <footer class="footer-section"></footer>
+        <div class="footer-container">
+            <div class="column-wrapper" style="padding: 40px;">
+                <div class="brand-logo">
+                    <img src="images/logo-krupa.png" alt="Krupa Corporation" width="350">
+                </div>
+                <p class="footer-info">Krupa Corporation is a B2B commerce company that leverages technology to revolutionize procurement, providing a streamlined and efficient experience for all players in the construction ecosystem.</p>
+            </div>
+            <div class="column-wrapper">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="link-item"><a href="index.html">Home</a></li>
+                    <li class="link-item"><a href="aboutus.html">About</a></li>
+                    <li class="link-item"><a href="blog.html">Blog</a></li>
+                    <li class="link-item"><a href="blog.html">E-Trade</a></li>
+                    <li class="link-item"><a href="https://www.linkedin.com/company/thekrupacorp/jobs/">Careers</a></li>
+                    <li class="link-item"><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="column-wrapper">
+                <h3>Policies</h3>
+                <ul class="footer-links">
+                    <li class="link-item"><a href="#">Terms & Conditions</a></li>
+                    <li class="link-item"><a href="#">Privacy Policy</a></li>
+                    <li class="link-item"><a href="#">Shipping Policy</a></li>
+                    <li class="link-item"><a href="#">Refund Policy</a></li>
+                    <li class="link-item"><a href="#">Cancellation Policy</a></li>
+                </ul>
+            </div>
+            <div class="column-wrapper">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li class="link-item"><a href="#">Krupa Corporation HQ 4th Floor, Sailok Complex, 6/1,<br> Arundelpet, Guntur, Andhra Pradesh 522002</a></li>
+                    <li class="link-item"><a href="#">+919059577879</a></li>
+                    <li class="link-item"><a href="mailto:support@krupacorp.com">Support@krupacorp.com</a></li>
+                </ul>
+            </div>
+            <div class="column-wrapper">
+                <h3>Get in Touch</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/krupacorp/"><i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i></a>
+                    <a href="https://x.com/krupacorpindia"><i class="fa-brands fa-twitter fa-xl" style="color: #000000;"></i></a>
+                    <a href="https://www.linkedin.com/company/krupacorporationcom"><i class="fa-brands fa-linkedin fa-xl" style="color: #000000;"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-section">
+            © 2024 Krupa Corporation Private Limited
+        </div>
+    </footer>
+</body>
+</html>

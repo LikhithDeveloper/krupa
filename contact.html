@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>krupa Corporation </title>
+    <!-- style sheet linking  -->
+     <link rel="stylesheet" href="style.css">
+
+     <!-- fontawaesom cdn  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font import  -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+            background-color: #EBEBEB;
+        }   
+        .contact-layout {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        font-family: jost;
+                        max-width: 1700px;
+                        margin: 0 auto;
+                        background-color: white;
+                        padding: 20px;
+                        /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+                    }
+                    .contact-section {
+                        flex: 1;
+                        min-width: 300px;
+                        padding: 0 20px;
+                        margin-bottom: 20px;
+                    }
+                    .section-title {
+                        color: #333;
+                        border-bottom: 2px solid #333;
+                        padding-bottom: 10px;
+                    }
+                    .contact-name {
+                        margin-bottom: 5px;
+                    }
+                    .contact-info {
+                        margin: 0 0 10px 0;
+                    }
+                    .contact-role {
+                        color: #666;
+                        font-style: italic;
+                    }
+                    .contact-email {
+                        color: #e44d26;
+                    }
+                    .contact-link {
+                        color: #e44d26;
+                        text-decoration: none;
+                        word-break: break-all;
+                    }
+                    .contact-link:hover {
+                        text-decoration: underline;
+                    }
+                    .container-contact{
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        border-radius: 30px;
+                        padding: 30px;
+                    }
+                    @media (max-width: 768px) {
+                        .contact-layout {
+                            flex-direction: column;
+                        }
+                        .contact-section {
+                            width: 100%;
+                            padding: 0;
+                        }
+                    }
+                    @media (max-width: 480px) {
+                        body {
+                            padding: 10px;
+                        }
+                        .section-title {
+                            font-size: 1.5em;
+                        }
+                        .contact-name {
+                            font-size: 1.2em;
+                        }
+                        .flx{
+                            flex-direction: column;
+                        }
+                        .map{
+                            width: 400px;
+                        }
+                    }
+            .container{
+                padding: 30px;
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+            .flx{
+                display: flex;
+                max-width: 1200px;
+                justify-content: space-between;
+                margin: 0 auto;
+                gap: 30px;
+              
+            }
+            .child{
+                max-width: 700px;
+                z-index: 10;
+            }
+            .details{
+                 box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                 padding: 30px;
+                 border-radius: 10px;
+                 background-color: white;
+                 transition: ease all .5s;
+                 transform: translateY(0) scale(1)
+                 
+            }
+            .details:hover{
+                transition: ease all .5s;
+                transform: translateY(0) scale(1.01);
+                -webkit-box-shadow: 0 14px 24px rgba(62, 57, 107, .2);
+                box-shadow: 0 14px 24px rgba(62, 57, 107, .2)
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="images/logo-krupa.png" alt="" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="trade_hub.html">Trade Hub</a></li>
+                <li><a href="https://www.linkedin.com/company/thekrupacorp/jobs/">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <button class="close-menu">✕</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="trade_hub.html">Trade Hub</a></li>
+            <li><a href="https://www.linkedin.com/company/thekrupacorp/jobs/">Careers</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="overlay"></div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const overlay = document.querySelector('.overlay');
+        const closeMenu = document.querySelector('.close-menu');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            overlay.style.display = 'block';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            overlay.style.display = 'none';
+        }
+
+        menuToggle.addEventListener('click', openMobileMenu);
+        closeMenu.addEventListener('click', closeMobileMenu);
+        overlay.addEventListener('click', closeMobileMenu);
+    </script>
+    <main>
+        <div class="container">
+            <h1 style="font-family: Jost;font-size: 35px;font-weight: 500;padding: 50px;">Contact Us</h1>
+            <div class="flx">
+                <div class="child details">
+                    <h3 class="section-heading" style="font-family: Jost;font-size: 30px;font-weight: 500;">Krupa Corporation HQ</h3>
+                    <p class="mb-3" style="font-family: Jost;font-size: 20px;">4th Floor, Sailok Complex, 6/1, Arundelpet,Guntur, Andhra Pradesh 522002</p>
+                    <p style="font-size: 20px;font-family: Jost;margin-bottom: 10px;">CIN : U64100AP2022PTC123120</p>
+
+                    <p style="font-size: 20px;font-family: Jost;margin-bottom: 10px;">+919059577879</p>
+                    <p style="font-size: 20px;"><a href="mailto:support@krupacorp.com"  style="font-family: Jost;">support@krupacorp.com</a></p>
+                    <div class="social-icons" style="margin-top: 20px;gap: 50px;display: flex;">
+                        <a href="https://www.instagram.com/krupacorp/"><i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i></a>
+                        <a href="https://x.com/krupacorpindia"><i class="fa-brands fa-twitter fa-xl" style="color: #000000;"></i></a>
+                        <a href="https://www.linkedin.com/company/krupacorporationcom"><i class="fa-brands fa-linkedin fa-xl" style="color: #000000;"></i></a>
+                        <a href="https://www.youtube.com/@krupaCorp"><i class="fa-brands fa-youtube fa-xl" style="color: #000000;"></i></a>
+                    </div>
+                </div>
+                <div class="child map" style="width: 700px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856266.3997730757!2d74.18206714315848!3d19.287359823551913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a75f3614c614d%3A0xb52826af858e8ce0!2sKrupa%20Corporation%20HQ!5e0!3m2!1sen!2sin!4v1726579746006!5m2!1sen!2sin"  height="450" style="border:0;width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <section class="container-contact">
+        <div class="contact-layout zoom" style="border-radius: 10px;">
+            <div class="contact-section">
+                <h2 class="section-title">Queries and Grievances</h2>
+                <h3 class="contact-name">Narayana</h3>
+                <p class="contact-role">company auditor</p>
+                <p class="contact-info">Email: <span class="contact-email">compliance@krupacorp.com</span></p>
+    
+                <h3 class="contact-name">Sai ram</h3>
+                <p class="contact-role">Company Secretary</p>
+                <p class="contact-info">Email: <span class="contact-email">compliance@krupacorp.com</span></p>
+    
+             </div>
+            <div class="contact-section">
+                <h2 class="section-title">Public Relations and Media</h2>
+                <h3 class="contact-name">Praveen</h3>
+                <p class="contact-role">Communications</p>
+                <p class="contact-info">Email: <span class="contact-email">pr@krupacorp.com</span></p>
+    
+                <h2 class="section-title">Customer Support</h2>
+                <p class="contact-info">Email: <span class="contact-email">support@krupacorp.com</span></p>
+            </div>
+        </div>
+    </div>
+    </section>
+    </main>
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="column-wrapper" style="padding: 40px;">
+                <div class="brand-logo">
+                    <img src="images/logo-krupa.png" alt="Krupa Corporation" width="350">
+                </div>
+                <p class="footer-info">Krupa Corporation is a B2B commerce company that leverages technology to revolutionize procurement, providing a streamlined and efficient experience for all players in the construction ecosystem.</p>
+            </div>
+            <div class="column-wrapper">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li class="link-item"><a href="index.html">Home</a></li>
+                    <li class="link-item"><a href="aboutus.html">About</a></li>
+                    <li class="link-item"><a href="blog.html">Blog</a></li>
+                    <li class="link-item"><a href="blog.html">E-Trade</a></li>
+                    <li class="link-item"><a href="https://www.linkedin.com/company/thekrupacorp/jobs/">Careers</a></li>
+                    <li class="link-item"><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="column-wrapper">
+                <h3>Policies</h3>
+                <ul class="footer-links">
+                    <li class="link-item"><a href="#">Terms & Conditions</a></li>
+                    <li class="link-item"><a href="#">Privacy Policy</a></li>
+                    <li class="link-item"><a href="#">Shipping Policy</a></li>
+                    <li class="link-item"><a href="#">Refund Policy</a></li>
+                    <li class="link-item"><a href="#">Cancellation Policy</a></li>
+                </ul>
+            </div>
+            <div class="column-wrapper">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li class="link-item"><a href="#">Krupa Corporation HQ 4th Floor, Sailok Complex, 6/1,<br> Arundelpet, Guntur, Andhra Pradesh 522002</a></li>
+                    <li class="link-item"><a href="#">+919059577879</a></li>
+                    <li class="link-item"><a href="mailto:support@krupacorp.com">Support@krupacorp.com</a></li>
+                </ul>
+            </div>
+            <div class="column-wrapper">
+                <h3>Get in Touch</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/krupacorp/"><i class="fa-brands fa-instagram fa-xl" style="color: #000000;"></i></a>
+                    <a href="https://x.com/krupacorpindia"><i class="fa-brands fa-twitter fa-xl" style="color: #000000;"></i></a>
+                    <a href="https://www.linkedin.com/company/krupacorporationcom"><i class="fa-brands fa-linkedin fa-xl" style="color: #000000;"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-section">
+            © 2024 Krupa Corporation Private Limited
+        </div>
+    </footer>
+</body>
+</html>
