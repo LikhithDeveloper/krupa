@@ -293,13 +293,99 @@
     </style>
 </head>
 <body>
+    <style>
+        .nav-item.dropdown {
+            position: relative;
+            display: inline-block;
+            
+        }
+        
+        .dropdown-toggle {
+            color: #333;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .dropdown-toggle::after {
+            content: '\25BC';
+            font-size: 0.7em;
+            margin-left: 5px;
+        }
+        
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 700px;
+            /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+            z-index: 1;
+            padding: 30px;
+            
+            left: 100%;
+            transform: translateX(-10%);
+        }
+        
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+        }
+        
+        
+        .dropdown-column {
+            width: 48%;
+        }
+        
+        .dropdown-column h3 {
+            color: #004499;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .dropdown-column a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .dropdown-column a:hover {
+            color: #004499;
+            text-decoration: underline;
+        }
+        @media (max-width: 1448px){
+            .dropdown-menu{
+                width: 900px;
+            }
+        }
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                min-width: 90vw;
+                left: 0;
+                transform: none;
+            }
+            
+            .dropdown-content {
+                flex-direction: column;
+            }
+            
+            .dropdown-column {
+                width: 100%;
+            }
+        }
+        </style>
+        
     <nav class="navbar">
         <div class="upper-nav">
             <div class="upper-nav-container">
                 <div class="additional-links">
                     <a href="#">Trade Hub login</a>
                     <a href="#">Fraud Alert</a>
-                    <a href="#">Contact Us</a>
+                    <a href="media.html">Media Kit</a>
                 </div>
             </div>
         </div>
@@ -307,25 +393,41 @@
             <div class="main-nav-container">
                 <img src="images/logo-krupa.png" alt="Reliance Industries Limited" class="logo">
                 <ul class="nav-links">
-                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="index.html" class="active" >Home</a></li>
                     <li class=" dropdown">
-                        <a href="#" class="dropdown-toggle active">Our Businesses</a>
+                        <a href="#" class="dropdown-toggle">Our Businesses</a>
                         <div class="dropdown-menu">
                             <div class="dropdown-content">
                                 <div class="dropdown-column">
                                     <h3>B2B Commerce</h3>
-                                    <a href="EProcurement.html" class="active">E Procurement</a>
+                                    <a href="EProcurement.html">E Procurement</a>
                                     
                                     <h3>Strategic Ventures</h3>
-                                    <a href="#">Retail</a>
-                                    <a href="#">Software Solutions</a>
+                                    <a href="Retail.html">Retail</a>
+                                    <a href="software-sol.html">Software Solutions</a>
                                    
                                 </div>
                                 
                             </div>
                         </div>
                     </li>
-                    <li><a href="about.html">About us</a></li>
+                    <li class=" dropdown">
+                        <a href="about.html" class="dropdown-toggle">About Us</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-column">
+                                    <h3></h3>
+                                    <a href="owners.html">About the Founder</a>
+                                    <a href="board-of-directors.html">Leadership team</a>
+                                    
+                                    <a href="media.html">Our Media Kit</a>
+                                    
+                                   
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="blog.html">Blogs</a></li>
                     <li><a href="trade_hub.html">Trade Hub</a></li>
                     <li><a href="https://www.linkedin.com/company/thekrupacorp/jobs/">Careers</a></li>
@@ -340,14 +442,12 @@
         <button class="close-menu">✕</button>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="#">Businesses</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">B2B</a></li>
-                    <li><a href="#">Telecom</a></li>
-                </ul>
-            </li>
+            <li><a href="EProcurement.html">E Procurement</a></li>
+            <li><a href="Retail.html">Retail</a></li>  
             <li><a href="about.html">About us</a></li>
+            <li><a href="owners.html">About the Founder</a></li>
+            <li><a href="board-of-directors.html">Leadership team</a></li>
+            <li><a href="media.html">Our Media Kit</a></li>
             <li><a href="blog.html">Blogs</a></li>
             <li><a href="trade_hub.html">Trade Hub</a></li>
             <li><a href="https://www.linkedin.com/company/thekrupacorp/jobs/">Careers</a></li>
