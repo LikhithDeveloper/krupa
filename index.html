@@ -39,8 +39,14 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
       header {
-        background-image: url(images/back.gif);
+        background-image: url(images/banner-1.gif);
         background-size: cover;
+      }
+      @media screen and (max-width: 500px) {
+        header {
+          background-image: url(images/banner-mobile.jpg);
+          background-size: cover;
+        }
       }
       .sidebyside {
         display: flex;
@@ -605,7 +611,7 @@
       </div>
     </nav>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" style="background-color: #0099ff">
       <button class="close-menu">✕</button>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -616,7 +622,7 @@
         <li><a href="board-of-directors.html">Leadership team</a></li>
         <li><a href="media.html">Our Media Kit</a></li>
         <li><a href="blog.html">Blogs</a></li>
-        <li><a href="trade_hub.html">Trade Hub</a></li>
+        <!-- <li><a href="trade_hub.html">Trade Hub</a></li> -->
         <li>
           <a href="https://www.linkedin.com/company/thekrupacorp/jobs/"
             >Careers</a
@@ -624,10 +630,10 @@
         </li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
-      <div class="stock-info" style="color: #fff; padding: 20px">
+      <!-- <div class="stock-info" style="color: #fff; padding: 20px">
         NSE ₹ 2,953.15 (-3.25%)<br />
         BSE ₹ 2,953.80 (-3.23%)
-      </div>
+      </div> -->
     </div>
 
     <script>
@@ -677,7 +683,7 @@
           "
         >
           <a
-            href="#"
+            href="about.html"
             class="bannerbutton"
             style="
               border: 2px solid white;
@@ -689,7 +695,7 @@
             >About Us</a
           >
           <a
-            href="#"
+            href="owners.html"
             class="bannerbutton"
             style="
               border: 2px solid white;
@@ -698,7 +704,7 @@
               text-decoration: none;
               border-radius: 40px;
             "
-            >Our Story</a
+            >Founder's Message</a
           >
         </div>
       </header>

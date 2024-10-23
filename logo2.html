@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reliance Industries Limited</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #fdf4e3;
+      }
+
+      header {
+        text-align: center;
+        padding: 50px;
+        background-color: white;
+      }
+
+      header h1 {
+        font-size: 36px;
+        color: #555;
+        font-weight: 400;
+      }
+
+      .logo-section {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .logo-section h2 {
+        color: #003366;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+
+      .logo-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 20px;
+        justify-items: center;
+      }
+
+      .logo-card {
+        background-color: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .logo-card img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+
+      .logo-card p {
+        margin-bottom: 15px;
+        color: #a67c52;
+        font-size: 16px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .buttons button {
+        border: 1px solid #ccc;
+        background-color: white;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .buttons button:hover {
+        background-color: #f2f2f2;
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 28px;
+        }
+
+        .logo-container {
+          grid-template-columns: 1fr;
+          padding: 0;
+        }
+      }
+
+      @media (min-width: 769px) {
+        .logo-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Krupa Retail Private Limited</h1>
+    </header>
+
+    <section class="logo-section">
+      <h2>Krupa Retail</h2>
+      <div class="logo-container">
+        <div class="logo-card">
+          <img src="images/7-7.png" alt="RIL Roundel (golden)" />
+          <p>RIL Roundel (golden)</p>
+          <div class="buttons">
+            <button>jpg</button>
+            <button>png</button>
+          </div>
+        </div>
+        <div class="logo-card">
+          <img src="images/8-8.png" alt="RIL Roundel (black)" />
+          <p>RIL Roundel (black)</p>
+          <div class="buttons">
+            <button>jpg</button>
+            <button>png</button>
+          </div>
+        </div>
+        <div class="logo-card">
+          <img
+            src="images/9-9.png"
+            alt="RIL Roundel (white with black background)"
+          />
+          <p>RIL Roundel (white with black background)</p>
+          <div class="buttons">
+            <button>jpg</button>
+            <button>png</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

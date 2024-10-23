@@ -209,7 +209,7 @@
             class="logo"
           />
           <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle">Our Businesses</a>
               <div class="dropdown-menu">
@@ -257,7 +257,7 @@
       </div>
     </nav>
 
-    <div class="mobile-menu">
+    <div class="mobile-menu" style="background-color: #0099ff">
       <button class="close-menu">✕</button>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -268,7 +268,7 @@
         <li><a href="board-of-directors.html">Leadership team</a></li>
         <li><a href="media.html">Our Media Kit</a></li>
         <li><a href="blog.html">Blogs</a></li>
-        <li><a href="trade_hub.html">Trade Hub</a></li>
+        <!-- <li><a href="trade_hub.html">Trade Hub</a></li> -->
         <li>
           <a href="https://www.linkedin.com/company/thekrupacorp/jobs/"
             >Careers</a
@@ -276,10 +276,10 @@
         </li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
-      <div class="stock-info" style="color: #fff; padding: 20px">
+      <!-- <div class="stock-info" style="color: #fff; padding: 20px">
         NSE ₹ 2,953.15 (-3.25%)<br />
         BSE ₹ 2,953.80 (-3.23%)
-      </div>
+      </div> -->
     </div>
 
     <script>
@@ -346,17 +346,19 @@
 
         const mediaKitData = [
           {
-            name: "Nita Mukesh Ambani Cultural Centre",
-            logo: "https://placeholder.com/150",
+            name: "Pradeep Deverakonda",
+            logo: "images/1-1.png",
+            link: "logos.html",
           },
           {
-            name: "Reliance Industries Limited",
-            logo: "https://placeholder.com/150",
+            name: "Krupa Coarporation",
+            logo: "images/2-2.png",
+            link: "logo1.html",
           },
-          { name: "Reliance New Energy", logo: "https://placeholder.com/150" },
-          { name: "Jio", logo: "https://placeholder.com/150" },
-          { name: "Reliance Retail", logo: "https://placeholder.com/150" },
-          { name: "Reliance Foundation", logo: "https://placeholder.com/150" },
+          { name: "Krupa Retail", logo: "images/6-6.png", link: "logo2.html" },
+          // { name: "Jio", logo: "https://placeholder.com/150" },
+          // { name: "Reliance Retail", logo: "https://placeholder.com/150" },
+          // { name: "Reliance Foundation", logo: "https://placeholder.com/150" },
         ];
 
         const publicationsData = [
@@ -395,7 +397,7 @@
                                 <div class="media-item">
                                     <img src="${item.logo}" alt="${item.name}">
                                     <p>${item.name}</p>
-                                    <a href="logos.html" class="view-button">View</a>
+                                    <a href="${item.link}" class="view-button">View</a>
                                 </div>
                             `;
               });
@@ -459,21 +461,6 @@
         <!-- Footer Links Section -->
         <div class="footer-links">
           <div class="footer-column">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="aboutus.html">About</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="blog.html">E-Trade</a></li>
-              <li>
-                <a href="https://www.linkedin.com/company/thekrupacorp/jobs/"
-                  >Careers</a
-                >
-              </li>
-              <li><a href="contact.html">Contact us</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
             <h4>Policies</h4>
             <ul>
               <li><a href="#">Terms & Conditions</a></li>
@@ -487,10 +474,30 @@
           <div class="footer-column">
             <h4>Businesses</h4>
             <ul>
-              <li><a href="#">New Energy & New Materials</a></li>
-              <li><a href="#">Digital Services-Jio</a></li>
+              <!-- <li><a href="#">New Energy & New Materials</a></li>
+              <li><a href="#">Digital Services-Jio</a></li> -->
+              <!-- <li><a href="#">Retail</a></li> -->
+              <li><a href="#">B2B commerce</a></li>
               <li><a href="#">Retail</a></li>
+              <li><a href="http://krupainfrahub.com">Infra Hub</a></li>
               <!-- Add more links here -->
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <!-- <li><a href="index.html">Home</a></li>
+              <li><a href="aboutus.html">About</a></li> -->
+              <li><a href="blog.html">Blog</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/thekrupacorp/jobs/"
+                  >Careers</a
+                >
+              </li>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="http://krupainfrahub.com">Infrahub</a></li>
+              <li><a href="https://yumzy.shop/">Yumzy.Shop</a></li>
+              <li><a href="https://avinyamall.com/">Avinyamall.com</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -513,7 +520,7 @@
         <!-- Footer Bottom Section -->
       </div>
       <div class="footer-bottom">
-        <p>© 2024 Your Company. All rights reserved.</p>
+        <p>© 2024 Krupa Corporation Private Limited. All rights reserved.</p>
         <div class="policies">
           <a href="#">Privacy Policy</a>
           <a href="#">Legal Notice</a>
