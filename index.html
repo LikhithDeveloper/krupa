@@ -702,30 +702,46 @@
           >
         </div>
       </header>
+      <style>
+        @media screen and (max-width: 500px) {
+          .we-care h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            color: #0099ff;
+          }
+          .description {
+            font-size: 20px;
+          }
+        }
+      </style>
 
       <div class="section">
         <div class="we-care reveal">
-          <h1>Building The Next Big Thing</h1>
+          <h1 class="index-text">Building The Next Big Thing</h1>
         </div>
-        <p class="description reveal">
-          Reliance Industries Limited is a Fortune 500<sup>&reg;</sup> company
-          and the largest private sector corporation in India.
-        </p>
+        <p class="description">Leading forward Horizons</p>
       </div>
+      <style>
+        .reveal {
+          font-size: 65px;
+          color: #0099ff;
+          text-align: center;
+          font-weight: 400;
+        }
+        @media screen and (max-width: 500px) {
+          .reveal {
+            font-size: 36px;
+          }
+        }
+      </style>
 
       <!-- marquee  -->
       <section class="marquee-section">
-        <h1
-          class="reveal"
-          style="
-            font-size: 65px;
-            color: #0099ff;
-            text-align: center;
-            font-weight: 400;
-          "
-        >
-          OUR PARTNERS
-        </h1>
+        <h1 class="reveal">OUR PARTNERS</h1>
 
         <div class="marquee-content">
           <div class="marquee-item">
@@ -869,9 +885,13 @@
                 <img src="images/logo1.png" alt="" style="height: 300px ;width: 300px;">
 
             </div> -->
-      <style></style>
+      <style>
+        .services {
+          font-size: 17px;
+        }
+      </style>
 
-      <section class="services reveal" style="padding: 30px">
+      <section class="services" style="padding: 30px">
         <div class="services-container">
           <nav class="services-nav">
             <button
@@ -1074,6 +1094,11 @@
         style="margin-top: 120px"
       ></iframe> -->
       <style>
+        .yt-main {
+          width: 100%;
+          height: 90vh;
+          background-color: #f5f1e6;
+        }
         .yt-section {
           width: 100%;
           height: 100%;
@@ -1087,11 +1112,21 @@
           background-color: #f5f1e6;
           border-radius: 10px;
         }
+        @media screen and (max-width: 500px) {
+          .yt-main {
+            width: 100%;
+            height: 63vh;
+            background-color: #f5f1e6;
+          }
+          .yt-section-inner {
+            width: 90%;
+            height: 50%;
+            background-color: #f5f1e6;
+            border-radius: 10px;
+          }
+        }
       </style>
-      <section
-        class="yt-main"
-        style="width: 100%; height: 90vh; background-color: #f5f1e6"
-      >
+      <section class="yt-main">
         <div class="yt-section">
           <div class="yt-section-inner">
             <iframe
@@ -1162,21 +1197,6 @@
         <!-- Footer Links Section -->
         <div class="footer-links">
           <div class="footer-column">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="aboutus.html">About</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="blog.html">E-Trade</a></li>
-              <li>
-                <a href="https://www.linkedin.com/company/thekrupacorp/jobs/"
-                  >Careers</a
-                >
-              </li>
-              <li><a href="contact.html">Contact us</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
             <h4>Policies</h4>
             <ul>
               <li><a href="#">Terms & Conditions</a></li>
@@ -1190,10 +1210,30 @@
           <div class="footer-column">
             <h4>Businesses</h4>
             <ul>
-              <li><a href="#">New Energy & New Materials</a></li>
-              <li><a href="#">Digital Services-Jio</a></li>
+              <!-- <li><a href="#">New Energy & New Materials</a></li>
+              <li><a href="#">Digital Services-Jio</a></li> -->
+              <!-- <li><a href="#">Retail</a></li> -->
+              <li><a href="#">B2B commerce</a></li>
               <li><a href="#">Retail</a></li>
+              <li><a href="http://krupainfrahub.com">Infra Hub</a></li>
               <!-- Add more links here -->
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <!-- <li><a href="index.html">Home</a></li>
+              <li><a href="aboutus.html">About</a></li> -->
+              <li><a href="blog.html">Blog</a></li>
+              <li>
+                <a href="https://www.linkedin.com/company/thekrupacorp/jobs/"
+                  >Careers</a
+                >
+              </li>
+              <li><a href="contact.html">Contact us</a></li>
+              <li><a href="http://krupainfrahub.com">Infrahub</a></li>
+              <li><a href="https://yumzy.shop/">Yumzy.Shop</a></li>
+              <li><a href="https://avinyamall.com/">Avinyamall.com</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -1216,7 +1256,7 @@
         <!-- Footer Bottom Section -->
       </div>
       <div class="footer-bottom">
-        <p>© 2024 Your Company. All rights reserved.</p>
+        <p>© 2024 Krupa Corporation Private Limited. All rights reserved.</p>
         <div class="policies">
           <a href="#">Privacy Policy</a>
           <a href="#">Legal Notice</a>
